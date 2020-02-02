@@ -1,5 +1,6 @@
 class QBWC::ActiveRecord::Session < QBWC::Session
   class QbwcSession < ActiveRecord::Base
+    include QbwcExtensions
     attr_accessible :company, :ticket, :user unless Rails::VERSION::MAJOR >= 4
   end
 

@@ -1,5 +1,6 @@
 class QBWC::ActiveRecord::Job < QBWC::Job
   class QbwcJob < ActiveRecord::Base
+    include QbwcExtensions
     validates :name, :uniqueness => true, :presence => true
     serialize :requests, Hash
     serialize :request_index, Hash
